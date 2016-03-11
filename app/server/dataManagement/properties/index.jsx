@@ -25,7 +25,7 @@ const getPropertyQueryString = `
         SELECT env_id, sum(depth) AS child_count
         FROM environment_tree
         GROUP BY env_id
-    )
+    ),
     selected_properties AS (
         SELECT DISTINCT ON (prop.name)
             prop.name AS name,
